@@ -1,15 +1,3 @@
-https://mapfish.github.io/mapfish-print-doc/api.html
-
-
-http://sisgeodef.defesa.mil.br:36510/print/apps.json
-http://sisgeodef.defesa.mil.br:36510/print/default/capabilities.json
-http://sisgeodef.defesa.mil.br:36510/print/default/report.pdf              <<<-- POST com spec
-
-
-USEI O EXEMPLO printwms_UsaPopulation_EPSG_4326
-
-com esse request
-
 {
   "layout": "A4 landscape",
   "outputFormat": "pdf",
@@ -67,8 +55,28 @@ com esse request
           }
         }
       ]
+    },
+    "legend": {
+      "name": "",
+      "classes": [
+        {
+          "name": "Bioma",
+          "dpi": "300",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2017_240_bioma"]
+        },
+        {
+          "name": "Redes UF",
+          "dpi": "300",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGEO:Redes_UF´s"]
+        },
+        {
+          "name": "ConcurUrb",
+          "dpi": "300",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2019_090_concurb_agreg"]
+        }
+		
+	  ]	  
     }
   }
-}
-
+} 
 
