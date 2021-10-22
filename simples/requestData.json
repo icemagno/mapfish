@@ -1,0 +1,83 @@
+{
+  "layout": "A4 landscape",
+  "outputFormat": "pdf",
+  "attributes": {
+    "autor": "Carlos Magno Abreu",
+    "map": {
+      "projection": "EPSG:4326",
+      "dpi": 300,
+      "rotation": 45,
+      "center": [-53.12,-10.20],
+	  "longitudeFirst": true,
+      "scale": 6500000,
+      "layers": [
+        {
+          "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
+          "opacity": 1,
+          "type": "WMS",
+          "layers": ["CGMAT:qg_2019_090_concurb_agreg"],
+          "imageFormat": "image/png",
+		  "version": "1.3.0",
+          "customParams": {
+            "TRANSPARENT": "true"
+          }
+        },
+        {
+          "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
+          "opacity": 1,
+          "type": "WMS",
+          "layers": ["CGEO:Redes_UF´s"],
+          "imageFormat": "image/png",
+		  "version": "1.3.0",
+          "customParams": {
+            "TRANSPARENT": "true"
+          }
+        },
+        {
+          "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
+          "opacity": 1,
+          "type": "WMS",
+          "layers": ["CGMAT:qg_2017_240_bioma"],
+          "imageFormat": "image/png",
+		  "version": "1.3.0",
+          "customParams": {
+            "TRANSPARENT": "true"
+          }
+        },
+        {
+          "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
+          "opacity": 1,
+          "type": "WMS",
+          "layers": ["CGEO:Camada_Base"],
+          "imageFormat": "image/png",
+		  "version": "1.3.0",
+          "customParams": {
+            "TRANSPARENT": "false"
+          }
+        }
+      ]
+    },
+    "legend": {
+      "name": "",
+      "classes": [
+        {
+          "name": "Bioma",
+          "dpi": "150",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2017_240_bioma"]
+        },
+        {
+          "name": "Redes UF",
+          "dpi": "150",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGEO:Redes_UF´s"]
+        },
+        {
+          "name": "ConcurUrb",
+          "dpi": "150",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2019_090_concurb_agreg"]
+        }
+		
+	  ]	  
+    }
+  }
+} 
+

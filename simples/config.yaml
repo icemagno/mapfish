@@ -1,0 +1,39 @@
+templates:
+  #===========================================================================
+  A4 landscape: !template
+  #===========================================================================
+    reportTemplate: mapa_legenda_simples.jrxml
+    attributes:
+      autor: !string
+        default: 'Sisgeodef'
+      map: !map
+        maxDpi: 600
+        width: 799
+        height: 347
+        default:
+          projection: "epsg:4326"
+      legend: !legend {}
+      northArrow: !northArrow
+        size: 50
+        default:
+          graphic: "rosa1.png"
+      scalebar: !scalebar
+        width: 130
+        height: 15
+        default:
+          fontSize: 6
+          align: "center"
+          padding: 2
+          lineWidth: 1
+          backgroundColor: "rgb(255, 255, 255)"      
+    processors:
+      - !reportBuilder
+        directory: '.'
+      - !createMap {}
+      - !prepareLegend
+        maxWidth: 200
+        dpi: 90
+        template: legenda.jrxml
+      - !createNorthArrow {}
+      - !createScalebar {}
+        
