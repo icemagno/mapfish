@@ -10,17 +10,22 @@ templates:
         default: '<DEFINA TITULO>'
       map: !map
         maxDpi: 600
-        width: 540
-        height: 347
+        width: 546
+        height: 467
         default:
           projection: "epsg:4326"
+      overviewMap: !overviewMap
+        width: 120
+        height: 84
+        maxDpi: 400
+        zoomFactor: 9          
       legend: !legend {}
       northArrow: !northArrow
-        size: 90
+        size: 65
         default:
           graphic: "rosa1.png"
       scalebar: !scalebar
-        width: 111
+        width: 160
         height: 25
         default:
           fontSize: 6
@@ -38,4 +43,7 @@ templates:
         template: legenda.jrxml
       - !createNorthArrow {}
       - !createScalebar {}
-        
+      - !addHeaders
+        headers:
+          user-agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36"       
+      - !createOverviewMap {}

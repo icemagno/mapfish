@@ -3,14 +3,29 @@
   "outputFormat": "pdf",
   "attributes": {
     "autor": "Carlos Magno Abreu",
-	"titulo": "Teste de Relatório 001",
+	"titulo": "Diagramação de Elementos de Mapa (A4)",
+	"overviewMap": {
+		"layers": [ 
+			{
+			  "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
+			  "opacity": 1,
+			  "type": "WMS",
+			  "layers": ["CGEO:Camada_Base_UF"],
+			  "imageFormat": "image/png",
+			  "version": "1.3.0",
+			  "customParams": {
+				"TRANSPARENT": "false"
+			  }
+			}		
+		]
+	},	
     "map": {
       "projection": "EPSG:4326",
       "dpi": 300,
       "rotation": 0,
       "center": [-53.12,-10.20],
 	  "longitudeFirst": true,
-      "scale": 7500000,
+      "scale": 15000000,
       "layers": [
 		{
 			"font": {
@@ -25,9 +40,9 @@
 				"size": 5,
 			},
 			"gridType": "lines",
-			"haloColor": "#ffee6b",
+			"haloColor": "#FFFFFF",
 			"haloRadius": 1,
-			"indent": 12,
+			"indent": 10,
 			"labelColor": "black",
 			"valueFormat": "###.#####",
 			"rotateLabels": false,
@@ -50,7 +65,7 @@
           "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
           "opacity": 1,
           "type": "WMS",
-          "layers": ["CGEO:Redes_UF´s"],
+          "layers": ["CGMAT:qg_2019_100_arranjpop"],
           "imageFormat": "image/png",
 		  "version": "1.3.0",
           "customParams": {
@@ -61,45 +76,25 @@
           "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
           "opacity": 1,
           "type": "WMS",
-          "layers": ["CGMAT:qg_2017_240_bioma"],
-          "imageFormat": "image/png",
-		  "version": "1.3.0",
-          "customParams": {
-            "TRANSPARENT": "true"
-          }
-        },
-        {
-          "baseURL": "https://geoservicos.ibge.gov.br/geoserver/wms",
-          "opacity": 1,
-          "type": "WMS",
-          "layers": ["CGEO:Camada_Base"],
+          "layers": ["CGEO:Camada_Base_UF"],
           "imageFormat": "image/png",
 		  "version": "1.3.0",
           "customParams": {
             "TRANSPARENT": "false"
           }
-        }
+        },
+  	
+		
       ]
     },
     "legend": {
       "name": "",
       "classes": [
         {
-          "name": "Bioma",
-          "dpi": "150",
-          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2017_240_bioma"]
-        },
-        {
-          "name": "Redes UF",
-          "dpi": "150",
-          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGEO:Redes_UF´s"]
-        },
-        {
-          "name": "ConcurUrb",
-          "dpi": "150",
-          "icons": ["https://geoservicos.ibge.gov.br/geoserver/CGMAT/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGMAT:qg_2019_090_concurb_agreg"]
-        }
-		
+          "name": "Analfabetos (40 a 49 anos)",
+          "dpi": "100",
+          "icons": ["https://geoservicos.ibge.gov.br/geoserver/wms?REQUEST=GetLegendGraphic&VERSION=1.0.0&FORMAT=image/png&WIDTH=20&HEIGHT=20&LAYER=CGEO:vw_per_analfabetos40a49anos"]
+        }		
 	  ]	  
     }
   }
