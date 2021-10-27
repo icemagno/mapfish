@@ -1,0 +1,21 @@
+{
+  "layout": "A4 portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "OSM Tile Layer",
+    "map": {
+      "projection": "EPSG:3857",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [957352.8034848921, 5936844.140278816],
+      "scale": 25000,
+      "layers": [
+        {
+          "type": "osm",
+          "baseURL": "http://tile.osm.ch/osm-swiss-style",
+          "imageExtension": "png"
+        }
+      ]
+    }
+  }
+}

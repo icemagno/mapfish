@@ -1,0 +1,50 @@
+{
+  "layout": "A4 portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "OSM Tile Layer",
+    "map": {
+      "projection": "EPSG:3857",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [957352.8034848921, 5936844.140278816],
+      "scale": 25000,
+      "layers": [
+        {
+          "type": "geojson",
+          "geoJson": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "properties": {
+                  "name": "Boat"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [957352.8034848921, 5936844.140278816]
+                }
+            }]
+          },
+          "style": {
+            "version": "2",
+            "*": {
+              "symbolizers": [
+                {
+                  "type" : "point",
+                  "graphicName": "circle",
+                  "pointRadius": 5,
+                  "fillColor":"#FF0000"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "osm",
+          "baseURL": "http://tile.thunderforest.com/cycle/",
+          "imageExtension": "png"
+        }
+      ]
+    }
+  }
+}

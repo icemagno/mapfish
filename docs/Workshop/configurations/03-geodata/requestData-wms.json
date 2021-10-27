@@ -1,0 +1,25 @@
+{
+  "layout": "A4 portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "WMS Layer",
+    "map": {
+      "projection": "EPSG:21781",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [615928, 174957],
+      "scale": 1000000,
+      "layers": [
+        {
+          "type": "WMS",
+          "layers": ["ch.swisstopo.pixelkarte-farbe-pk1000.noscale"],
+          "baseURL": "http://wms.geo.admin.ch/",
+          "imageFormat": "image/jpeg",
+          "version": "1.1.1",
+          "customParams": {
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "layout": "A4 portrait",
+  "outputFormat": "pdf",
+  "attributes": {
+    "title": "OSM Tile Layer",
+    "map": {
+      "projection": "EPSG:3857",
+      "dpi": 180,
+      "rotation": 0,
+      "center": [957352.8034848921, 5936844.140278816],
+      "scale": 25000,
+      "layers": [
+        {
+          "type": "geojson",
+          "geoJson": {
+            "type": "FeatureCollection",
+            "features": [{
+                "type": "Feature",
+                "properties": {
+                  "name": "Boat"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [957352.8034848921, 5936844.140278816]
+                }
+            }]
+          },
+          "style": {
+            "version": "2",
+            "*": {
+              "symbolizers": [
+                {
+                  "type" : "point",
+                  "externalGraphic": "boat-tour.png",
+                  "graphicWidth": 32,
+                  "graphicOpacity" : 1.0,
+                  "graphicFormat" : "image/png"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "osm",
+          "baseURL": "http://tile.osm.ch/osm-swiss-style",
+          "imageExtension": "png"
+        }
+      ]
+    }
+  }
+}
