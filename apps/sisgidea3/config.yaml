@@ -1,6 +1,6 @@
 templates:
   #===========================================================================
-  A4 landscape: !template
+  A3 landscape: !template
   #===========================================================================
     reportTemplate: mapa.jrxml
     attributes:
@@ -10,8 +10,8 @@ templates:
         default: '<DEFINA TITULO>'
       map: !map
         maxDpi: 600
-        width: 546
-        height: 467
+        width: 979
+        height: 690
         default:
           projection: "epsg:4326"
       overviewMap: !overviewMap

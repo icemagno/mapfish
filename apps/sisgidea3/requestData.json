@@ -1,9 +1,9 @@
 {
-  "layout": "A4 landscape",
+  "layout": "A3 landscape",
   "outputFormat": "pdf",
   "attributes": {
     "autor": "Carlos Magno Abreu",
-	"titulo": "Diagramação de Elementos de Mapa (A4)",
+	"titulo": "Diagramação de Elementos de Mapa (A3)",
 	"overviewMap": {
 		"layers": [ 
 			{

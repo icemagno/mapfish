@@ -1,6 +1,6 @@
 templates:
   #===========================================================================
-  A4 landscape: !template
+  A4 portrait: !template
   #===========================================================================
     reportTemplate: mapa.jrxml
     attributes:
@@ -10,8 +10,8 @@ templates:
         default: '<DEFINA TITULO>'
       map: !map
         maxDpi: 600
-        width: 546
-        height: 467
+        width: 449
+        height: 664
         default:
           projection: "epsg:4326"
       overviewMap: !overviewMap
@@ -25,7 +25,7 @@ templates:
         default:
           graphic: "rosa1.png"
       scalebar: !scalebar
-        width: 160
+        width: 113
         height: 25
         default:
           type: "bar_sub"
@@ -41,7 +41,7 @@ templates:
         directory: '.'
       - !createMap {}
       - !prepareLegend
-        maxWidth: 200
+        maxWidth: 116
         dpi: 90
         template: legenda.jrxml
       - !createNorthArrow {}
